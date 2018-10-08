@@ -29,7 +29,7 @@
             }
 
             createItems(period) {
-                console.log(period);
+
                 let dates = [];
                 for (let i = +period.start; i < +period.end; i += 3600000 * 168) {
                     dates.push(i);
@@ -40,6 +40,7 @@
                     let date = new Date(dates[i]);
 
                     let i1, i2;
+                    console.log(date.getDay());
                     if (date.getDay() == 1) {
                         i1 = date.toLocaleDateString();
                         i2 = new Date(date.setHours(168)).toLocaleDateString();
@@ -64,6 +65,7 @@
                     }
 
                     period[i] = `${i1} - ${i2}`;
+                    console.log(`i1: ${i1} i2: ${i2}  period: ${period[i]}`);
 
                     let n = periods.length, a = periods.length;
                     let b = false;
@@ -81,6 +83,7 @@
                         }
                     } while (a > 1 || b);
                 }
+
                 return periods;
             }
 
