@@ -50,19 +50,18 @@
                         i1 = new Date(date.setHours(-48)).toLocaleDateString();
                         i2 = new Date(date.setHours(120)).toLocaleDateString();
                     } else if (date.getDay() == 4) {
-                        i1 = new Date(date.setHours(-48)).toLocaleDateString();
-                        i2 = new Date(date.setHours(120)).toLocaleDateString();
+                        i1 = new Date(date.setHours(-72)).toLocaleDateString();
+                        i2 = new Date(date.setHours(96)).toLocaleDateString();
                     } else if (date.getDay() == 5) {
-                        i1 = new Date(date.setHours(-72)).toLocaleDateString()
-                        i2 = new Date(date.setHours(96)).toLocaleDateString()
-                    } else if (date.getDay() == 6) {
                         i1 = new Date(date.setHours(-96)).toLocaleDateString();
                         i2 = new Date(date.setHours(72)).toLocaleDateString();
-                    } else if (date.getDay() == 0) {
+                    } else if (date.getDay() == 6) {
                         i1 = new Date(date.setHours(-120)).toLocaleDateString();
                         i2 = new Date(date.setHours(48)).toLocaleDateString();
-                    }
-                    console.log('dates; '+ date);
+                    }else if (date.getDay() == 0) {
+                        i1 = new Date(date.setHours(-144)).toLocaleDateString();
+                        i2 = new Date(date.setHours(24)).toLocaleDateString();
+
                     period[i] = `${i1} - ${i2}`;
 
                     let n = periods.length, a = periods.length;
