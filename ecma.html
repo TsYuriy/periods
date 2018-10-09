@@ -15,7 +15,9 @@
             }
 
             onChange(event) {
-
+                if(document.querySelector('ol') !== null){
+                    document.querySelector('.containerForLastUpdateRecordAndPeriodItems').removeChild(document.querySelector('ol'));
+                }
                 this.inputValue = new Date(event.srcElement.value);
                 return this.inputValue;
             }
@@ -107,6 +109,7 @@
                 this.renderItems(
                     this.createItems(
                         this.createPeriod(this.inputValue)));
+
             }
         }
 
@@ -141,6 +144,7 @@
 <div class="input"><input type='date'/></div>
 <div class="containerForLastUpdateRecordAndPeriodItems"></div>
 <script>
+
     new dateRange();
 
 </script>
